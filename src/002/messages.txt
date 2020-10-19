@@ -1,0 +1,9 @@
+$title = "Kind vermisst";
+$type = "2";
+$start = "Die kleine Julia wird vermisst. Sie wurde zuletzt am gemeldeten Ort gesehen. Eile ist geboten.";
+$pickup = "Julia ist froh, dass wir sie so schnell aus ihrer misslichen Lage befreien konnten.";
+$flight2 = "Julia ist jetzt an Bord. Sicherheitshalber bringen wir sie ins Krankenhaus.";
+$failed1 = "Leider sind wir nicht rechtzeitig angekommen. Julia ist stinksauer, dass wir sie so lange haben warten lassen.";
+$failed2 = "Jetzt hat der Flug ins Krankenhaus doch so lange gedauert. Julia hat grossen Hunger und schlechte Laune.";
+$end = "Julia geht es gut. Die leichte Unterkühlung wurde im Hubschrauber behandelt. Sie wurde zur Sicherheit an das Notfall-Team im Krankenhaus übergeben.";
+

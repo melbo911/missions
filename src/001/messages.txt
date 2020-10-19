@@ -1,0 +1,9 @@
+$title = "Zusammenstoss zweier Fahrzeuge";
+$type = "0";
+$start = "2 PKW sind zusammengestossen. Einer der Insassen ist schwer verletzt. Weitere Rettungskräfte sind ebenfalls vor Ort.";
+$pickup = "Wird sind noch rechtzeitig am Unfallort angekommen.";
+$flight2 = "Das Unfallopfer ist an Bord und wir sind auf dem Weg ins Krankenhaus.";
+$failed1 = "Leider sind wir nicht rechtzeitig am Unfallort angekommen. Das Unfallopfer ist gerade verstorben.";
+$failed2 = "Das Unfallopfer ist leider auf dem Weg zum Krankenhaus verstorben.";
+$end = "Das Unfallopfer wurde unterwegs versorgt und nun an das Notfall-Team im Krankenhaus übergeben.";
+

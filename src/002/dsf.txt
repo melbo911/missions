@@ -1,0 +1,19 @@
+A
+800
+DSF2TEXT
+
+# file: +48+011.dsf
+
+PROPERTY sim/west 11
+PROPERTY sim/east 12
+PROPERTY sim/north 49
+PROPERTY sim/south 48
+PROPERTY sim/planet earth
+PROPERTY sim/creation_agent WorldEditor2.2.0r2
+PROPERTY laminar/internal_revision 0
+PROPERTY sim/overlay 1
+PROPERTY sim/require_agpoint 1/0
+PROPERTY sim/require_object 1/0
+OBJECT_DEF 3D_people_library/girl_sitting_2.obj
+OBJECT 0 11.558450637 48.129604887 0.000000
+# Result code: 0
