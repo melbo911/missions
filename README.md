@@ -19,9 +19,34 @@ Put the created XML file to the HRM plugin folder. In addition to "Civilian" and
 
 Done.
 
-The source folders contain some examples. They're called 001, 002 and 003
+The C source folder contains some examples. They're called 001, 002 and 003
+
+Folder 000 contains a message.txt file explaining the structure. The file is read top-to-down and messages are interpreted by their position in the file.
+
+
+--------------------------------------------------------------
+
+Explanation:
+
+	This line defines the mission title.
+	This line defines the mission-type , i.e. "0" which stands for "Street Accidents" (see source)
+	This line defines the short description of the mission.
+	This line defines the message shown if we reach the scene on time.
+	This line defines the message shown if the patient has been picked up.
+	This line defines the message shown if we did not reach the scene on time.
+	This line defines the message shown if we did not reach the hospital on time.
+	This line defines the message shown if we reached the hospital on time.
 
 
 
+Example:
 
-
+	Frontal Crash
+	0
+	Frontal car crash in the country site. The fire fighters are already on site and reported one person to be seriously injured.
+	The patient is on board and we are on our way to the hospital. We should go as quickly, but also as smoothly as possible to ensure our patient is alright
+	The patient is on board and we are on our way to the hospital. We should go as quickly, but also as smoothly as possible to ensure our patient is alright
+	We did not make it in time. At least we should pick up the corpse, the hospital pathologist is eager to see it and we still get some money from the insurance.
+	Unfortunately, our patient did not make it. Let&apos;s drop the corpse at the hospital and leave the rest to the pathologist.
+	The patient was handed over to the hospital surgeons.
+	
