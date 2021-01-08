@@ -47,6 +47,7 @@ int max_lon = 0;
 int lat_center = 0;
 int lon_center = 0;
 int obcnt = 0;
+int is_patient = 0;
 
 /*-----------------------------------------------------------------*/
 
@@ -81,6 +82,7 @@ char* getword(char *s,int n) {           /* return n-th word */
       s[i++] = '\0';
       n--;
    }
+
    return(p);
 }
 
@@ -98,29 +100,29 @@ int strip(char *s) {           /* remove trailing whitespace */
 
 int read_messages(char *f)        /* quick and dirty file read */
 {
-    FILE *fp;
-    if ( (fp = fopen(f,"r")) ) {
-       fgets(title, MAX_TXT, fp);
-       fgets(type, MAX_TXT, fp);
-       fgets(start, MAX_TXT, fp);
-       fgets(pickup, MAX_TXT, fp);
-       fgets(flight2, MAX_TXT, fp);
-       fgets(failed1, MAX_TXT, fp);
-       fgets(failed2, MAX_TXT, fp);
-       fgets(end, MAX_TXT, fp);
-       strip(title);
-       strip(type);
-       strip(start);
-       strip(pickup);
-       strip(flight2);
-       strip(failed1);
-       strip(failed2);
-       strip(end);
-       return(0);
-    } else {
-       printf("cannot open %s\n",f);
-       return(9);
-    }
+   FILE *fp;
+   if ( (fp = fopen(f,"r")) ) {
+      fgets(title, MAX_TXT, fp);
+      fgets(type, MAX_TXT, fp);
+      fgets(start, MAX_TXT, fp);
+      fgets(pickup, MAX_TXT, fp);
+      fgets(flight2, MAX_TXT, fp);
+      fgets(failed1, MAX_TXT, fp);
+      fgets(failed2, MAX_TXT, fp);
+      fgets(end, MAX_TXT, fp);
+      strip(title);
+      strip(type);
+      strip(start);
+      strip(pickup);
+      strip(flight2);
+      strip(failed1);
+      strip(failed2);
+      strip(end);
+      return(0);
+   } else {
+      printf("cannot open %s\n",f);
+      return(9);
+   }
 }
 
 /*-----------------------------------------------------------------*/
@@ -168,6 +170,14 @@ int read_objects(char *m)
    int y = 0;
    int z = 0;
 
+   min_lat = 9999999;
+   min_lon = 9999999;
+   max_lat = 0;
+   max_lon = 0;
+   lat_center = 0;
+   lon_center = 0;
+   int n_patient = 0;
+   
    FILE *fp;
    if ( (fp = fopen(mpath,"r")) ) {
       while ( fgets(buf, MAX_TXT, fp) ) {
@@ -175,33 +185,41 @@ int read_objects(char *m)
          if ( ! strncmp(buf,"OBJECT_DEF",10) ) {
             strcpy(objects[obj++],&buf[11]);
          } else {
-            if ( ! strncmp(buf,"OBJECT ",7) ) {
-               strcpy(buf2,buf);
-               o_num[obcnt] = atoi(getword(buf2,2));
+            if ( ! strncmp(buf,"PROPERTY sim/require_object ",28) ) {
+               if ( ! strncmp(&buf[28],"6/",2) ) {
+                  is_patient = n_patient;
+               } else {
+                  n_patient = atoi(&buf[30]);
+               }
+            } else {
+               if ( ! strncmp(buf,"OBJECT ",7) ) {
+                  strcpy(buf2,buf);
+                  o_num[obcnt] = atoi(getword(buf2,2));
 
-               strcpy(buf2,buf);
-               x = atoi(normalize(getword(buf2,3)));
+                  strcpy(buf2,buf);
+                  x = atoi(normalize(getword(buf2,3)));
 
-               strcpy(buf2,buf);
-               y = atoi(normalize(getword(buf2,4)));
+                  strcpy(buf2,buf);
+                  y = atoi(normalize(getword(buf2,4)));
 
-               strcpy(buf2,buf);
-               z = atoi(getword(buf2,5));
+                  strcpy(buf2,buf);
+                  z = atoi(getword(buf2,5));
 
-               if ( x < min_lat ) min_lat = x;
-               if ( x > max_lat ) max_lat = x;
+                  if ( x < min_lat ) min_lat = x;
+                  if ( x > max_lat ) max_lat = x;
 
-               if ( y < min_lon ) min_lon = y;
-               if ( y > max_lon ) max_lon = y;
+                  if ( y < min_lon ) min_lon = y;
+                  if ( y > max_lon ) max_lon = y;
 
 
-               o_lat[obcnt] = x;
+                  o_lat[obcnt] = x;
 
-               o_lon[obcnt] = y;
+                  o_lon[obcnt] = y;
 
-               o_head[obcnt] = z;
-
-               obcnt++;
+                  o_head[obcnt] = z;
+   
+                  obcnt++;
+               }
             }
          }
       }
@@ -216,7 +234,15 @@ int read_objects(char *m)
 int print_objects(char *m)
 {
    int o = 0;
+   char patient[10];
    while ( o < obcnt ) {
+      if ( is_patient > 0 ) {
+        strcpy(patient,"true");
+        is_patient--;
+      } else {
+        strcpy(patient,"false");
+      }
+
       printf("    <object_%d>\n\
         <obj_path>%s</obj_path>\n\
         <elevation>0</elevation>\n\
@@ -225,7 +251,7 @@ int print_objects(char *m)
         <heading>%d</heading>\n\
         <pitch>0</pitch>\n\
         <roll>0</roll>\n\
-        <is_patient>false</is_patient>\n\
+        <is_patient>%s</is_patient>\n\
         <is_slingload>false</is_slingload>\n\
         <sling_is_bambi_bucket>false</sling_is_bambi_bucket>\n\
         <sling_instanced_drawing>true</sling_instanced_drawing>\n\
@@ -243,7 +269,7 @@ int print_objects(char *m)
         <sling_friction_glide>0.35</sling_friction_glide>\n\
         <sling_friction_static>3</sling_friction_static>\n\
     </object_%d>\n",
-         o,objects[o_num[o]],(int)(o_lat[o] - min_lat - lat_center),(int)(o_lon[o] - min_lon - lon_center), o_head[o], o);
+         o,objects[o_num[o]],(int)(o_lat[o] - min_lat - lat_center),(int)(o_lon[o] - min_lon - lon_center), o_head[o], patient, o);
 
       o++;
    }

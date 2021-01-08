@@ -1,0 +1,9 @@
+This line defines the mission title.
+This line defines the mission-type , i.e. "0" which stands for "Street Accidents" (see source)
+This line defines the short description of the mission.
+This line defines the message shown if we reach the scene on time.
+This line defines the message shown if the patient has been picked up.
+This line defines the message shown if we did not reach the scene on time.
+This line defines the message shown if we did not reach the hospital on time.
+This line defines the message shown if we reached the hospital on time.
+
