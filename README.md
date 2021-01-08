@@ -11,7 +11,7 @@ Export the scenepack and convert the dsf file inside to a text version. You will
 
 Put the dfs.txt together with the messages.txt into a separate folder.
 
-Run the script/program:
+Run the program and give the created folder names as arguments, while redirecting the output to a file:
 
 	mk_mission newfolder > scenery_3.xml
 
@@ -56,7 +56,7 @@ Example:
 
 Special "patient" handling.
 
-If the patient has been picked up, it will disapear from the scene. In order to define which object should be treated "as patient" it can be defined within WED. Since there is no "is_patient" flag in WED, I'm using a different method. In X-Plane an object can be configured to be "shown with" a certain level of object density. These levels reach from 0 (Default) to 6 (Totally insane). I'm using level-6 to identify which object should be treated as "patient". For these objects the variable "is_patient" is being set to "true" in the generated XML file.
+If the patient has been picked up, it will disapear from the scene. In order to define which object should be treated "as patient" it can be defined within WED. Since there is no "is_patient" property in WED, I'm using a different method. In X-Plane an object can be configured to be "shown with" a certain level of object density. These levels reach from 0 (Default) to 6 (Totally insane). I'm using level-6 to identify which object should be treated as "patient". For these objects the variable "is_patient" is being set to "true" in the generated XML file.
 
 
 
