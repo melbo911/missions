@@ -5,7 +5,7 @@ mk_mission is a little program, which can be used to create scenery files for th
 
 First create a new scene using the X-Plane WorldEditor (WED).
 
-Export the scenepack and convert the dsf file inside to a text version. YOu will need "DSFtool" from the XPTools package (https://developer.x-plane.com/tools/xptools/).
+Export the scenepack and convert the dsf file inside to a text version. You will need "DSFtool" from the XPTools package (https://developer.x-plane.com/tools/xptools/).
 
 	DSFTool --dsf2text newscene.dsf dsf.txt
 
@@ -15,16 +15,18 @@ Run the script/program:
 
 	mk_mission newfolder > scenery_3.xml
 
-Put the created XML file to the HRM plugin folder. In addition to "Civilian" and "Military" you will now see a "Custom" mission set in the pulldown list. The "Title" can easily be changed inside the XML file using a text editor.
+Put the created XML file to the HRM plugin folder. In addition to "Civilian" and "Military" you will now see a "Custom" mission set in the pulldown list. The title "Custom" can easily be changed inside the XML file using a text editor.
 
 Done.
 
-The C source folder contains some examples. They're called 001, 002 and 003
-
-Folder 000 contains a message.txt file explaining the structure. The file is read top-to-down and messages are interpreted by their position in the file.
-
 
 --------------------------------------------------------------
+
+The C source folder contains some examples. They're called 001, 002 and 003
+
+Folder 000 contains a message.txt file explaining the structure. The file is read top-to-down and messages are interpreted by their position inside the file.
+
+
 
 Explanation:
 
@@ -50,3 +52,14 @@ Example:
 	Unfortunately, our patient did not make it. Let&apos;s drop the corpse at the hospital and leave the rest to the pathologist.
 	The patient was handed over to the hospital surgeons.
 	
+--------------------------------------------------------------
+
+Special "patient" handling.
+
+If the patient has been picked up, it will disapear from the scene. In order to define which object should be treated "as patient" it can be defined within WED. Since there is no "is_patient" flag in WED, I'm using a different method. In X-Plane an object can be configured to be "shown with" a certain level of object density. These levels reach from 0 (Default) to 6 (Totally insane). I'm using level-6 to identify which object should be treated as "patient". For these objects the variable "is_patient" is being set to "true" in the generated XML file.
+
+
+
+
+
+
