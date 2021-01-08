@@ -1,6 +1,6 @@
-# m_mission
+# mk_mission
 
-mk_mission is a little program (perl script and compiled version available)  which can be used to create scenery files for the great "Heli Rescue Mission" (HRM) X-Plane plugin made by Kristian80.
+mk_mission is a little program, which can be used to create scenery files for the great "Heli Rescue Mission" (HRM) X-Plane plugin made by Kristian80.
 
 
 First create a new scene using the X-Plane WorldEditor (WED).
@@ -21,7 +21,6 @@ Done.
 
 The source folders contain some examples. They're called 001, 002 and 003
 
-Note: The message.txt file format for the  Perl script uses a different format. Just look at the example folders.
 
 
 
