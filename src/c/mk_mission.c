@@ -14,21 +14,15 @@
 # melbo @ x-plane.org
 #
 */
-#define VERSION "1.0"
+#define VERSION "1.1"
 
 #ifdef _WIN32
-/*
- #include <windows.h>
- #include <process.h>
- #include "dirent.h"
-*/
  #ifndef F_OK
  # define F_OK 0
  # define X_OK 1
  # define W_OK 2
  # define R_OK 4
  #endif
- 
 #else
  #include <libgen.h>
  #include <unistd.h>
