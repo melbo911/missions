@@ -14,11 +14,30 @@
 # melbo @ x-plane.org
 #
 */
+#define VERSION "1.0"
+
+#ifdef _WIN32
+/*
+ #include <windows.h>
+ #include <process.h>
+ #include "dirent.h"
+*/
+ #ifndef F_OK
+ # define F_OK 0
+ # define X_OK 1
+ # define W_OK 2
+ # define R_OK 4
+ #endif
+ 
+#else
+ #include <libgen.h>
+ #include <unistd.h>
+ #include <dirent.h>
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 int mission_number = 0;
 
@@ -48,6 +67,7 @@ int lat_center = 0;
 int lon_center = 0;
 int obcnt = 0;
 int is_patient = 0;
+FILE *output;
 
 /*-----------------------------------------------------------------*/
 
@@ -133,7 +153,7 @@ int print_mission(char *m) 	     /* print mission header */
    sprintf(mpath,"%s/messages.txt",m);
    if (!read_messages(mpath)) {
 
-   printf("    <name>%s</name>\n\
+   fprintf(output,"    <name>%s</name>\n\
     <type>%s</type>\n\
     <start_text>%s</start_text>\n\
     <pickup_text>%s</pickup_text>\n\
@@ -243,7 +263,7 @@ int print_objects(char *m)
         strcpy(patient,"false");
       }
 
-      printf("    <object_%d>\n\
+      fprintf(output,"    <object_%d>\n\
         <obj_path>%s</obj_path>\n\
         <elevation>0</elevation>\n\
         <dist_x>%d</dist_x>\n\
@@ -296,13 +316,13 @@ int do_mission(char *m)
       printf("%s does not exist\n",mpath);
       return(12);
    }
-   printf("<mission_%d>\n",mission_number);
+   fprintf(output,"<mission_%d>\n",mission_number);
 
    print_mission(m);
    read_objects(m);
    print_objects(m);
 
-   printf("</mission_%d>\n",mission_number);
+   fprintf(output,"</mission_%d>\n",mission_number);
    mission_number++;
    return(0);
 }
@@ -311,7 +331,7 @@ int do_mission(char *m)
 
 int print_head()
 {
-   printf("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<scenery>\n   <name>Custom</name>\n</scenery>\n");
+   fprintf(output, "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<scenery>\n   <name>Custom</name>\n</scenery>\n");
    return(0);
 }
 
@@ -320,16 +340,22 @@ int print_head()
 int main(int argc, char **argv) {
 
    if ( argc < 2 ) {
-      printf("usage: %s params....\n",argv[0]);
+      printf("usage: %s params....\n     Version: %s\n",argv[0],VERSION);
       return(1);
    }
 
-   print_head();
+   if ( (output = fopen("new-scenery.xml","w")) != NULL ) {
 
-   int i=1;
-   while (i<argc) {
-      do_mission(argv[i]);
-      i++;
+      print_head();
+
+      int i=1;
+      while (i<argc) {
+         do_mission(argv[i]);
+         i++;
+      }
+      fclose(output);
+   } else {
+      printf("cannot open output file\n");
    }
 }
 
