@@ -11,9 +11,11 @@ Export the scenepack and convert the dsf file inside to a text version. You will
 
 Put the dfs.txt together with the messages.txt into a separate folder.
 
-Run the program and give the created folder names as arguments, while redirecting the output to a file:
+Run the program and give the created folder names as arguments. 
 
-	mk_mission newfolder > scenery_3.xml
+	mk_mission newfolder_1 newfolder_2 newfolder_n
+
+The program will create a new file named "new-scenery.xml".
 
 Put the created XML file to the HRM plugin folder. In addition to "Civilian" and "Military" you will now see a "Custom" mission set in the pulldown list. The title "Custom" can easily be changed inside the XML file using a text editor.
 
