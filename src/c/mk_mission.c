@@ -66,7 +66,7 @@ FILE *output;
 /*-----------------------------------------------------------------*/
 
 
-char* normalize(char *s) {           /* return n-th word */
+char* normalize(char *s) {           /* normalize lon/lat coordinates */
    int l;
    int i = 0;
    int j = 0;
@@ -76,14 +76,7 @@ char* normalize(char *s) {           /* return n-th word */
 
    f = atof(s);
 
-/*
-   printf("string=%s  float=%f\n", s , f);
-*/
-
    sprintf(s,"%08.5f\n",f);
-/*
-   printf("  > string.a=%s\n", s );
-*/
 
    l = strlen(s);
 
@@ -96,9 +89,6 @@ char* normalize(char *s) {           /* return n-th word */
    }
    s[j] = '\0';
 
-/*
-   printf("  > string.b=%s\n", s );
-*/
    return(s);
 }
 
