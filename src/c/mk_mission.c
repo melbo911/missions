@@ -14,7 +14,7 @@
 # melbo @ x-plane.org
 #
 */
-#define VERSION "1.1"
+#define VERSION "1.2"
 
 #ifdef _WIN32
  #ifndef F_OK
@@ -65,19 +65,40 @@ FILE *output;
 
 /*-----------------------------------------------------------------*/
 
+
 char* normalize(char *s) {           /* return n-th word */
-   int l = strlen(s);
+   int l;
    int i = 0;
+   int j = 0;
    char *p = s ;
 
-   while (i < l && s[i] > '.') {
+   double f;
+
+   f = atof(s);
+
+/*
+   printf("string=%s  float=%f\n", s , f);
+*/
+
+   sprintf(s,"%08.5f\n",f);
+/*
+   printf("  > string.a=%s\n", s );
+*/
+
+   l = strlen(s);
+
+   while (i < 8 && s[i] > '\0') {
+      if ( s[i] >= '0' ){
+         s[j] = s[i];
+         j++;
+      }
       i++;
    }
-   while (i < 7 && s[i] > '\0') {
-      s[i] = s[i+1];
-      i++;
-   }
-   s[i] = '\0';
+   s[j] = '\0';
+
+/*
+   printf("  > string.b=%s\n", s );
+*/
    return(s);
 }
 

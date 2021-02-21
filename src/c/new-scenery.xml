@@ -20,8 +20,8 @@
     <object_0>
         <obj_path>3D_people_library/farm10.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-3</dist_x>
-        <dist_y>-2</dist_y>
+        <dist_x>-2</dist_x>
+        <dist_y>-3</dist_y>
         <heading>90</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -47,7 +47,7 @@
         <obj_path>RescueX/objects/stretcher.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-3</dist_x>
-        <dist_y>-2</dist_y>
+        <dist_y>-3</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -72,8 +72,8 @@
     <object_2>
         <obj_path>RescueX/objects/OBJ_pylone.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>5</dist_x>
-        <dist_y>6</dist_y>
+        <dist_x>6</dist_x>
+        <dist_y>5</dist_y>
         <heading>217</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -176,7 +176,7 @@
     <object_6>
         <obj_path>RescueX/objects/OBJ_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>10</dist_x>
+        <dist_x>11</dist_x>
         <dist_y>1</dist_y>
         <heading>258</heading>
         <pitch>0</pitch>
@@ -228,7 +228,7 @@
     <object_8>
         <obj_path>RescueX/objects/OBJ_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-13</dist_x>
+        <dist_x>-12</dist_x>
         <dist_y>-6</dist_y>
         <heading>66</heading>
         <pitch>0</pitch>
@@ -255,7 +255,7 @@
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>3</dist_x>
-        <dist_y>-8</dist_y>
+        <dist_y>-9</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -281,7 +281,7 @@
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-9</dist_x>
-        <dist_y>-7</dist_y>
+        <dist_y>-8</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -306,7 +306,7 @@
     <object_11>
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-13</dist_x>
+        <dist_x>-12</dist_x>
         <dist_y>0</dist_y>
         <heading>86</heading>
         <pitch>0</pitch>
@@ -332,7 +332,7 @@
     <object_12>
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>1</dist_x>
+        <dist_x>2</dist_x>
         <dist_y>9</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
@@ -358,8 +358,8 @@
     <object_13>
         <obj_path>RescueX/objects/Feuerloescher_100kg.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-10</dist_x>
-        <dist_y>4</dist_y>
+        <dist_x>-9</dist_x>
+        <dist_y>3</dist_y>
         <heading>163</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -384,8 +384,8 @@
     <object_14>
         <obj_path>RescueX/cars/Polizei_FuStw_01_lit_open.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-11</dist_x>
-        <dist_y>7</dist_y>
+        <dist_x>-10</dist_x>
+        <dist_y>6</dist_y>
         <heading>68</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -410,8 +410,8 @@
     <object_15>
         <obj_path>RescueX/cars/RTW_DRK_Bayern.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-5</dist_x>
-        <dist_y>-4</dist_y>
+        <dist_x>-4</dist_x>
+        <dist_y>-5</dist_y>
         <heading>329</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -437,7 +437,7 @@
         <obj_path>RescueX/cars/NEF_Passat_sb1099_lit_open.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>7</dist_x>
-        <dist_y>-3</dist_y>
+        <dist_y>-4</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -488,7 +488,7 @@
     <object_18>
         <obj_path>RescueX/people/CIV/PAX/1/People_CIV_PAX_01_011.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>3</dist_x>
+        <dist_x>4</dist_x>
         <dist_y>6</dist_y>
         <heading>245</heading>
         <pitch>0</pitch>
@@ -541,7 +541,7 @@
         <obj_path>RescueX/cars/Crashed_Kia_Picanto.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>0</dist_x>
-        <dist_y>1</dist_y>
+        <dist_y>0</dist_y>
         <heading>155</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -566,8 +566,8 @@
     <object_21>
         <obj_path>RescueX/cars/Crashed_CLK.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-2</dist_x>
-        <dist_y>4</dist_y>
+        <dist_x>-1</dist_x>
+        <dist_y>3</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -608,8 +608,8 @@
     <object_0>
         <obj_path>3D_people_library/farm10.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-3</dist_x>
-        <dist_y>-2</dist_y>
+        <dist_x>-2</dist_x>
+        <dist_y>-3</dist_y>
         <heading>90</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -635,7 +635,7 @@
         <obj_path>RescueX/objects/stretcher.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-3</dist_x>
-        <dist_y>-2</dist_y>
+        <dist_y>-3</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -660,8 +660,8 @@
     <object_2>
         <obj_path>RescueX/objects/OBJ_pylone.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>5</dist_x>
-        <dist_y>6</dist_y>
+        <dist_x>6</dist_x>
+        <dist_y>5</dist_y>
         <heading>217</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -764,7 +764,7 @@
     <object_6>
         <obj_path>RescueX/objects/OBJ_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>10</dist_x>
+        <dist_x>11</dist_x>
         <dist_y>1</dist_y>
         <heading>258</heading>
         <pitch>0</pitch>
@@ -816,7 +816,7 @@
     <object_8>
         <obj_path>RescueX/objects/OBJ_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-13</dist_x>
+        <dist_x>-12</dist_x>
         <dist_y>-6</dist_y>
         <heading>66</heading>
         <pitch>0</pitch>
@@ -843,7 +843,7 @@
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>3</dist_x>
-        <dist_y>-8</dist_y>
+        <dist_y>-9</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -869,7 +869,7 @@
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-9</dist_x>
-        <dist_y>-7</dist_y>
+        <dist_y>-8</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -894,7 +894,7 @@
     <object_11>
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-13</dist_x>
+        <dist_x>-12</dist_x>
         <dist_y>0</dist_y>
         <heading>86</heading>
         <pitch>0</pitch>
@@ -920,7 +920,7 @@
     <object_12>
         <obj_path>RescueX/objects/OBJ_Faltdreieck.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>1</dist_x>
+        <dist_x>2</dist_x>
         <dist_y>9</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
@@ -946,8 +946,8 @@
     <object_13>
         <obj_path>RescueX/objects/Feuerloescher_100kg.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-10</dist_x>
-        <dist_y>4</dist_y>
+        <dist_x>-9</dist_x>
+        <dist_y>3</dist_y>
         <heading>163</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -972,8 +972,8 @@
     <object_14>
         <obj_path>RescueX/cars/Polizei_FuStw_01_lit_open.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-11</dist_x>
-        <dist_y>7</dist_y>
+        <dist_x>-10</dist_x>
+        <dist_y>6</dist_y>
         <heading>68</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -998,8 +998,8 @@
     <object_15>
         <obj_path>RescueX/cars/RTW_DRK_Bayern.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-5</dist_x>
-        <dist_y>-4</dist_y>
+        <dist_x>-4</dist_x>
+        <dist_y>-5</dist_y>
         <heading>329</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1025,7 +1025,7 @@
         <obj_path>RescueX/cars/NEF_Passat_sb1099_lit_open.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>7</dist_x>
-        <dist_y>-3</dist_y>
+        <dist_y>-4</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1076,7 +1076,7 @@
     <object_18>
         <obj_path>RescueX/people/CIV/PAX/1/People_CIV_PAX_01_011.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>3</dist_x>
+        <dist_x>4</dist_x>
         <dist_y>6</dist_y>
         <heading>245</heading>
         <pitch>0</pitch>
@@ -1129,7 +1129,7 @@
         <obj_path>RescueX/cars/Crashed_Kia_Picanto.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>0</dist_x>
-        <dist_y>1</dist_y>
+        <dist_y>0</dist_y>
         <heading>155</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1154,8 +1154,8 @@
     <object_21>
         <obj_path>RescueX/cars/Crashed_CLK.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-2</dist_x>
-        <dist_y>4</dist_y>
+        <dist_x>-1</dist_x>
+        <dist_y>3</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1238,7 +1238,7 @@
     <object_0>
         <obj_path>RescueX/objects/stretcher.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>3</dist_x>
+        <dist_x>2</dist_x>
         <dist_y>-4</dist_y>
         <heading>78</heading>
         <pitch>0</pitch>
@@ -1265,7 +1265,7 @@
         <obj_path>RescueX/objects/stretcher.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-8</dist_x>
-        <dist_y>8</dist_y>
+        <dist_y>7</dist_y>
         <heading>105</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1290,8 +1290,8 @@
     <object_2>
         <obj_path>RescueX/objects/OBJ_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-2</dist_x>
-        <dist_y>-16</dist_y>
+        <dist_x>-3</dist_x>
+        <dist_y>-17</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1316,7 +1316,7 @@
     <object_3>
         <obj_path>RescueX/objects/OBJ_Faltdreieck_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>8</dist_x>
+        <dist_x>7</dist_x>
         <dist_y>-14</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
@@ -1342,7 +1342,7 @@
     <object_4>
         <obj_path>RescueX/objects/OBJ_Faltdreieck_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>6</dist_x>
+        <dist_x>5</dist_x>
         <dist_y>17</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
@@ -1394,8 +1394,8 @@
     <object_6>
         <obj_path>RescueX/objects/OBJ_Faltdreieck_Leuchte.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-6</dist_x>
-        <dist_y>17</dist_y>
+        <dist_x>-7</dist_x>
+        <dist_y>16</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1446,8 +1446,8 @@
     <object_8>
         <obj_path>3D_people_library/girl_green_top.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-14</dist_x>
-        <dist_y>-12</dist_y>
+        <dist_x>-15</dist_x>
+        <dist_y>-13</dist_y>
         <heading>51</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1472,7 +1472,7 @@
     <object_9>
         <obj_path>3D_people_library/fireman4.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-1</dist_x>
+        <dist_x>-2</dist_x>
         <dist_y>-11</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
@@ -1551,7 +1551,7 @@
         <obj_path>3D_people_library/Fireman.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-9</dist_x>
-        <dist_y>5</dist_y>
+        <dist_y>4</dist_y>
         <heading>41</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1576,8 +1576,8 @@
     <object_13>
         <obj_path>3D_people_library/business_woman.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-15</dist_x>
-        <dist_y>11</dist_y>
+        <dist_x>-16</dist_x>
+        <dist_y>10</dist_y>
         <heading>89</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1602,8 +1602,8 @@
     <object_14>
         <obj_path>3D_people_library/boy_skateboard.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>12</dist_x>
-        <dist_y>-5</dist_y>
+        <dist_x>11</dist_x>
+        <dist_y>-6</dist_y>
         <heading>305</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1655,7 +1655,7 @@
         <obj_path>3D_people_library/boy.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>16</dist_x>
-        <dist_y>13</dist_y>
+        <dist_y>12</dist_y>
         <heading>240</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1681,7 +1681,7 @@
         <obj_path>RescueX/cars/Polizei_FuStw_01_lit_open.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-12</dist_x>
-        <dist_y>-6</dist_y>
+        <dist_y>-7</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1758,7 +1758,7 @@
     <object_20>
         <obj_path>RescueX/cars/RTW_FEU_GUT.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-8</dist_x>
+        <dist_x>-9</dist_x>
         <dist_y>-12</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
@@ -1784,8 +1784,8 @@
     <object_21>
         <obj_path>RescueX/cars/RTW_DRK_Bayern.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>7</dist_x>
-        <dist_y>-10</dist_y>
+        <dist_x>6</dist_x>
+        <dist_y>-11</dist_y>
         <heading>28</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1811,7 +1811,7 @@
         <obj_path>RescueX/cars/NEF_Passat_sb1099_lit_open.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-10</dist_x>
-        <dist_y>0</dist_y>
+        <dist_y>-1</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1836,8 +1836,8 @@
     <object_23>
         <obj_path>RescueX/cars/NEF_Passat_sb1099.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>7</dist_x>
-        <dist_y>-1</dist_y>
+        <dist_x>6</dist_x>
+        <dist_y>-2</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1863,7 +1863,7 @@
         <obj_path>RescueX/cars/FW_FF_Stuehlingen_RW1_open.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>9</dist_x>
-        <dist_y>7</dist_y>
+        <dist_y>6</dist_y>
         <heading>334</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1915,7 +1915,7 @@
         <obj_path>RescueX/cars/Crashed_Opel_Insignia.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-1</dist_x>
-        <dist_y>-7</dist_y>
+        <dist_y>-8</dist_y>
         <heading>127</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1967,7 +1967,7 @@
         <obj_path>RescueX/cars/Crashed_Kia_Picanto.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-2</dist_x>
-        <dist_y>-2</dist_y>
+        <dist_y>-3</dist_y>
         <heading>180</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -1993,7 +1993,7 @@
         <obj_path>RescueX/cars/car_gmc_old.obj</obj_path>
         <elevation>0</elevation>
         <dist_x>-3</dist_x>
-        <dist_y>1</dist_y>
+        <dist_y>0</dist_y>
         <heading>0</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -2018,8 +2018,8 @@
     <object_30>
         <obj_path>RescueX/cars/car_fordRangerWhite.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>1</dist_x>
-        <dist_y>6</dist_y>
+        <dist_x>0</dist_x>
+        <dist_y>5</dist_y>
         <heading>175</heading>
         <pitch>0</pitch>
         <roll>0</roll>
@@ -2044,8 +2044,8 @@
     <object_31>
         <obj_path>RescueX/cars/car_datsunGO.obj</obj_path>
         <elevation>0</elevation>
-        <dist_x>-1</dist_x>
-        <dist_y>8</dist_y>
+        <dist_x>-2</dist_x>
+        <dist_y>7</dist_y>
         <heading>193</heading>
         <pitch>0</pitch>
         <roll>0</roll>
