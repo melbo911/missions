@@ -14,7 +14,7 @@
 # melbo @ x-plane.org
 #
 */
-#define VERSION "1.2"
+#define VERSION "1.4"
 
 #ifdef _WIN32
  #ifndef F_OK
@@ -33,8 +33,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-int mission_number = 0;
-
 #define MAX_OBJ 256
 #define MAX_TXT 256
 
@@ -49,48 +47,22 @@ char end[MAX_TXT];
 
 char objects[MAX_OBJ][MAX_TXT];
 int o_num[MAX_OBJ];
-int o_lat[MAX_OBJ];
-int o_lon[MAX_OBJ];
+double o_lat[MAX_OBJ];
+double o_lon[MAX_OBJ];
 int o_head[MAX_OBJ];
 
-unsigned long min_lat = 9999999999;
-unsigned long min_lon = 9999999999;
-int max_lat = 0;
-int max_lon = 0;
+double min_lat   = 0;
+double min_lon   = 0;
+double max_lat   = 0;
+double max_lon   = 0;
 int lat_center = 0;
 int lon_center = 0;
-int obcnt = 0;
+int obcnt      = 0;
 int is_patient = 0;
+int mission    = 0;
 FILE *output;
 
-/*-----------------------------------------------------------------*/
-
-
-char* normalize(char *s) {           /* normalize lon/lat coordinates */
-   int l;
-   int i = 0;
-   int j = 0;
-   char *p = s ;
-
-   double f;
-
-   f = atof(s);
-
-   sprintf(s,"%08.5f\n",f);
-
-   l = strlen(s);
-
-   while (i < 8 && s[i] > '\0') {
-      if ( s[i] >= '0' ){
-         s[j] = s[i];
-         j++;
-      }
-      i++;
-   }
-   s[j] = '\0';
-
-   return(s);
-}
+int debug = 1;
 
 /*-----------------------------------------------------------------*/
 
@@ -191,14 +163,14 @@ int read_objects(char *m)
 
    int obj = 0;
    obcnt = 0;
-   int x = 0;
-   int y = 0;
+   float x = 0;
+   float y = 0;
    int z = 0;
 
-   min_lat = 9999999;
-   min_lon = 9999999;
-   max_lat = 0;
-   max_lon = 0;
+   min_lat = 9999999.0;
+   min_lon = 9999999.0;
+   max_lat = -9999999.0;
+   max_lon = -9999999.0;
    lat_center = 0;
    lon_center = 0;
    int n_patient = 0;
@@ -222,10 +194,10 @@ int read_objects(char *m)
                   o_num[obcnt] = atoi(getword(buf2,2));
 
                   strcpy(buf2,buf);
-                  x = atoi(normalize(getword(buf2,3)));
+                  x = atof(getword(buf2,3)) * 100000;
 
                   strcpy(buf2,buf);
-                  y = atoi(normalize(getword(buf2,4)));
+                  y = atof(getword(buf2,4)) * 100000;
 
                   strcpy(buf2,buf);
                   z = atoi(getword(buf2,5));
@@ -248,8 +220,13 @@ int read_objects(char *m)
             }
          }
       }
-      lat_center = (int)((max_lat - min_lat) /2);
-      lon_center = (int)((max_lon - min_lon) /2);
+      lat_center = (int)((max_lat - min_lat) / 2 );
+      lon_center = (int)((max_lon - min_lon) / 2 );
+
+      if ( debug ) {
+        printf("maxlon=%lf minlon=%lf lonctr=%d\n",max_lon,min_lon,lon_center);
+        printf("maxlat=%lf minlat=%lf latctr=%d\n",max_lat,min_lat,lat_center);
+      }
    }
    return(0);
 }
@@ -307,9 +284,8 @@ int print_objects(char *m)
 int do_mission(char *m)
 {
    char mpath[MAX_TXT];
-/*
-   printf("doing mission %s\n",m);
-*/
+
+   if (debug) printf("doing mission %s\n",m);
 
    sprintf(mpath,"%s/messages.txt",m);
    if( access( mpath, F_OK ) == -1 ) {
@@ -321,14 +297,14 @@ int do_mission(char *m)
       printf("%s does not exist\n",mpath);
       return(12);
    }
-   fprintf(output,"<mission_%d>\n",mission_number);
+   fprintf(output,"<mission_%d>\n",mission);
 
    print_mission(m);
    read_objects(m);
    print_objects(m);
 
-   fprintf(output,"</mission_%d>\n",mission_number);
-   mission_number++;
+   fprintf(output,"</mission_%d>\n",mission);
+   mission++;
    return(0);
 }
 
